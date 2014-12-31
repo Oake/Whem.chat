@@ -17,6 +17,8 @@ Widget::Widget()
     l_username = new QLineEdit("Anonyme");
     hBoxL = new QHBoxLayout();
 
+    texte->setWordWrap(1);
+
     a_url->setScheme("FTP");
     a_url->setHost("ftp.olympe.in");
     a_url->setPort(21);
@@ -88,13 +90,15 @@ void Widget::sendMessage()
     ofstream fichierRE("upload.txt", ios::out | ios::app);
     if (fichierRE)
     {
-        fichierRE << l_username->text().toStdString() << " : " << texte.toStdString();
+        fichierRE << l_username->text().toStdString() << " : " << texte.toStdString() << endl;
     }
 
     if (envoi->open(QIODevice::ReadOnly))
     {
         manager->put(request, envoi);
     }
+
+    l_line->clear();
 
     t_timer->start(2000);
 }

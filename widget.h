@@ -20,7 +20,7 @@
 
 using namespace std;
 
-class Widget : public QMainWindow
+class Widget : public QWidget
 {
     Q_OBJECT
 
