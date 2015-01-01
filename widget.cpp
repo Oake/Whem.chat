@@ -23,7 +23,7 @@ Widget::Widget()
     a_url->setHost("ftp.olympe.in");
     a_url->setPort(21);
     a_url->setUserName("darksasuke");
-    a_url->setPassword("leoa3wzxko");
+    a_url->setPassword("**********");
     a_url->setPath("/Messages/msg.txt");
 
     hBoxL->addWidget(l_username);
